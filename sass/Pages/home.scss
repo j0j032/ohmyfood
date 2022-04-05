@@ -1,4 +1,3 @@
-
 .explore{
     @include column-centered;
     text-align: center;
@@ -14,6 +13,7 @@
     @include column-centered;
     gap:20px;
     margin-bottom: 60px;
+    margin-left: 10px;
 }
 
 .purple-dot__container{
@@ -27,14 +27,21 @@
     margin:0px 20px 0px -10px;
 }
 
+.fa-store{
+    color: $purple
+}
+
 .cards-repeater{
     @include column-centered;
     width: 100%;
+    margin-top: -20px;
+    margin-bottom: 40px;
 }
 
 .new-sticker{
     @include centered;
     width: 20%;
+    padding: 2% 5% 2% 5%;
     color: $green-darken;
     background-color: $green;
     border-radius: 4px;

@@ -1,10 +1,17 @@
+body {
+  margin: 0%;
+}
+
 a {
   text-decoration: none;
   color: #262627;
 }
-
 a:hover {
-  color: #9356DC;
+  font-weight: bold;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
 }
 
 body {
@@ -64,7 +71,7 @@ h6 {
 
 .header {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   height: 70px;
   width: 100%;
 }
@@ -72,9 +79,22 @@ h6 {
   width: 45%;
   height: 100%;
 }
+.header__logo--withBtn {
+  width: 45%;
+  height: 100%;
+  margin-left: -100px;
+}
+.header__back-btn {
+  width: 10%;
+  border: none;
+  background-color: transparent;
+  font-size: 1.5em;
+  margin-left: -80px;
+  margin-right: -60px;
+}
 
-body {
-  margin: 0%;
+.nav {
+  list-style: none;
 }
 
 .heading__container {
@@ -123,10 +143,6 @@ body {
   background-color: #f7f7f7;
 }
 
-.reduce-margin-top {
-  margin-top: -80px;
-}
-
 .form {
   width: 100%;
   height: 50px;
@@ -149,6 +165,32 @@ body {
   font-weight: 500;
 }
 
+.footer {
+  background-color: #262627;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer__logo {
+  font-size: 1em;
+  color: #fffefc;
+  margin-bottom: 0px;
+}
+.footer .nav__link a {
+  color: #fffefc;
+  font-size: 0.8em;
+  margin-left: -40px;
+}
+
+.fa-utensils {
+  margin-right: 10px;
+}
+
+.fa-handshake-angle {
+  margin-right: 5px;
+}
+
 .explore {
   display: flex;
   flex-direction: column;
@@ -168,6 +210,7 @@ body {
   align-items: center;
   gap: 20px;
   margin-bottom: 60px;
+  margin-left: 10px;
 }
 
 .purple-dot__container {
@@ -184,11 +227,17 @@ body {
   margin: 0px 20px 0px -10px;
 }
 
+.fa-store {
+  color: #9356DC;
+}
+
 .cards-repeater {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  margin-top: -20px;
+  margin-bottom: 40px;
 }
 
 .new-sticker {
@@ -197,6 +246,7 @@ body {
   justify-content: center;
   padding: 5px;
   width: 20%;
+  padding: 2% 5% 2% 5%;
   color: #2c9c81;
   background-color: #99E2D0;
   border-radius: 4px;
