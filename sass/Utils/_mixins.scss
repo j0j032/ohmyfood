@@ -1,3 +1,43 @@
+@mixin pinkAndPurple-bg{
+    background-image: linear-gradient(to bottom right, $pink, $purple);
+}
+@mixin purpleAndPink-bg{
+    background-image: linear-gradient(to bottom right, $purple, $pink );
+}
+
+
 @mixin shadow {
     box-shadow: 2px 2px 5px 2px lightgray;
+}
+
+@mixin generic-radius {
+    border-radius: 20px;
+}
+
+@mixin item {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 70px;
+    @include generic-radius;
+    @include shadow;
+}
+
+@mixin column-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin column-fromStart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@mixin centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
 }

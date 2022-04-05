@@ -1,0 +1,35 @@
+body{
+    margin: 0%;
+}
+.heading__container{
+    width:90%;
+    margin: 20px 0px 0px 0px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.column-repeater{
+    @include column-centered;
+    gap:20px;
+    &__element{
+        @include item;
+        &--gray{
+            @include item;
+            background-color: $gray-lighten;
+        }
+        &--purple{
+            @include item;
+            background-color: $purple-lighten;
+        }
+    }
+}
+
+.bg-container{
+    width: 100%;
+    height: fit-content;
+    background-color: $gray-lighten;
+}
+
+.reduce-margin-top{
+    margin-top: -80px;
+}

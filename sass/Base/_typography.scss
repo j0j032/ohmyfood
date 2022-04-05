@@ -1,3 +1,40 @@
+body{
+    font-family: 'Roboto',sans-serif;
+}
+
+p{
+    font-weight: 100;
+}
+
+.rest-menu > p {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: $black-lighten;
+}
+
+.column-repeater__element > p {
+    font-size: 0.8em;
+    color: $black-lighten;
+}
+
 h1{
     font-family: 'Shrikhand';
+}
+.home h1{
+        font-family: 'Roboto',sans-serif;
+}
+
+
+h3{
+    font-size: 1em;
+}
+
+.restaurant-card h3{
+    font-size: 1.2em;
+}
+
+
+h6{
+    font-size: 0.8em;
+    margin-left: 1.3em;
 }

@@ -1,14 +1,14 @@
 .btn{
     width: 60%;
     height: 50px;
-    margin: 40px;
+    margin: 40px 10% 60px 10%;
     color: $white;
     font-size: 16px;
     border: none;
-    background-image: linear-gradient(to bottom right, $pink, $purple) ;
     border-radius: 50px;
+    @include pinkAndPurple-bg;
     @include shadow;
         &:hover{
-            background-image: linear-gradient(to bottom right, $purple, $pink ) ;
+            @include purpleAndPink-bg;
         }
 }

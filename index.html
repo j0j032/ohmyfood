@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <script src="https://kit.fontawesome.com/46ae58ead9.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="public/css/style.css">
         <link rel="shortcut icon" href="" sizes="16x16">
         <title></title>
@@ -22,28 +22,30 @@
                     </p>
                 </form>
 
-                <section class="explore">
-                    <h1 class="explore__text"> Réservez le menu qui vous convient</h1>
-                    <p class="explore__text"> Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+                <section class="explore bg-container">
+                    <h1> Réservez le menu qui vous convient</h1>
+                    <p> Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
                     <button class="btn">Explorer nos restaurants</button>
                 </section>
 
-                <section class="container">
-                    <h1 class="heading">Fonctionnement</h1>
-                    <div class="column-repeater">
-                        <div class="column-repeater__element">
+                <section>
+                    <div class="fonctionnement__container">
+                        <div class="heading__container">
+                            <h1>Fonctionnement</h1>
+                        </div>
+                        <div class="column-repeater__element--gray">
                             <div class="purple-dot__container">1</div>
                             <i class="fa-solid fa-mobile-screen-button"></i>
                             <h6>Choisissez un restaurant</h6>
                         </div>
 
-                        <div class="column-repeater__element">
+                        <div class="column-repeater__element--gray">
                             <div class="purple-dot__container">2</div>
                             <i class="fa-solid fa-bars"></i>
                             <h6>Composez votre menu</h6>
                         </div>
 
-                        <div class="column-repeater__element">
+                        <div class="column-repeater__element--purple">
                             <div class="purple-dot__container">3</div>
                             <i class="fa-solid fa-store"></i>
                             <h6>Dégustez au restaurant</h6>
@@ -51,23 +53,64 @@
                     </div>
                 </section>
 
-                <section class="container">
-                    <h1>Restaurants</h1>
-                    <a href="">
-                        <div class="column-repeater">
-                            <div class="restaurant-card">
-                                <div class="restaurant-card__tag"><div class="new-sticker">Nouveau</div></div>
-                                <img class="restaurant-card__img" src="public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
-                                <div class="restaurant-card__description">
-                                    <div class="restaurant-card__nameAndLocation">
-                                        <h5 class="restaurant-card__name">La palette du goût</h5>
-                                        <p class="restaurant-card__location">Ménilmontant</p>
-                                    </div>
-                                    <a class="favorite" href=""><i class="fa-regular fa-heart"></i></a>
-                                </div>
-                            </div>
+                <section>
+                    <div class="column-repeater bg-container">
+                        <div class="heading__container">
+                            <h1>Restaurants</h1>
                         </div>
-                    </a>
+                        <div class="cards-repeater"> 
+                            <a href="">
+                                <div class="rest-prev">
+                                    <div class="rest-prev__tag"><div class="new-sticker">Nouveau</div></div>
+                                    <img class="rest-prev__img" src="public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                                    <div class="rest-prev__description">
+                                        <div class="rest-prev__nameAndLocation">
+                                            <h3 class="rest-prev__name">La palette du goût</h3>
+                                            <p class="rest-prev__location">Ménilmontant</p>
+                                        </div>
+                                        <a href=""><i class="fa-regular fa-heart"></i></a>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="rest-prev">
+                                    <div class="rest-prev__tag"><div class="new-sticker">Nouveau</div></div>
+                                    <img class="rest-prev__img" src="public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
+                                    <div class="rest-prev__description">
+                                        <div class="rest-prev__nameAndLocation">
+                                            <h3 class="rest-prev__name">La note enchantée</h3>
+                                            <p class="rest-prev__location">Charonne</p>
+                                        </div>
+                                        <a href=""><i class="fa-regular fa-heart"></i></a>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="rest-prev">
+                                    <img class="rest-prev__img" src="public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+                                    <div class="rest-prev__description">
+                                        <div class="rest-prev__nameAndLocation">
+                                            <h3 class="rest-prev__name">À la française</h3>
+                                            <p class="rest-prev__location">Cité Rouge</p>
+                                        </div>
+                                        <a href=""><i class="fa-regular fa-heart"></i></a>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="rest-prev">
+                                    <img class="rest-prev__img" src="public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+                                    <div class="rest-prev__description">
+                                        <div class="rest-prev__nameAndLocation">
+                                            <h3 class="rest-prev__name">Le délice des sens</h3>
+                                            <p class="rest-prev__location">Folie-Méricourt</p>
+                                        </div>
+                                        <a href=""><i class="fa-regular fa-heart"></i></a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>   
+                    </div>
                 </section>
             </main>
         <footer>

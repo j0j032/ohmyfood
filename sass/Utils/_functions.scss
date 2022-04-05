@@ -1,0 +1,6 @@
+@function fillHeart(){
+    $Unclicked:regular;
+    @if ($Unclicked:hover){
+        $Unclicked:solid;
+    }
+}

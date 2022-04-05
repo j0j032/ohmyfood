@@ -1,99 +1,98 @@
-.home {
-    h1{
-        font-family: 'Roboto';
-    }
-}
 
 .explore{
-    width: 100%;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: $gray-lighten;
-    &__text{
-        width: 70%;
-        margin: 35px 10px -5px 10px;
-        text-align: center;
+    @include column-centered;
+    text-align: center;
+    & h1{
+        margin: 40px 5% 0px 5%;
+    }
+    & p{
+        margin: 20px 5% 0px 5%;
     }
 }
 
-/*_____________*/
-
-
 .fonctionnement__container{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    @include column-centered;
     gap:20px;
+    margin-bottom: 60px;
 }
 
 .purple-dot__container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include centered;
     width: 15px;
     height:15px;
-    font-size: 12px;
-    background-color: #9356DC;
-    color: #fff;
-    border-radius: 20px;
-    padding: 5px;
+    font-size: 0.8em;
+    background-color: $purple;
+    color: $white;
+    @include generic-radius;
     margin:0px 20px 0px -10px;
 }
 
-.restaurant-card{
+.cards-repeater{
+    @include column-centered;
+    width: 100%;
+}
+
+.new-sticker{
+    @include centered;
+    width: 20%;
+    color: $green-darken;
+    background-color: $green;
+    border-radius: 4px;
+}
+
+.rest-prev{
     width: 90%;
     height: fit-content;
     padding-bottom: 0px;
     margin-bottom: 25px;
-    background-color: #FFF;
-    border-radius: 16px 16px 16px 16px;
-    box-shadow: 0px 4px 15px 1px rgb(206, 204, 204);
-}
-.restaurant-card__tag{
-    position: absolute;
-    z-index: 6;
-    width: 80%;
-    display: flex;
-    justify-content: flex-end;
-}
-.restaurant-card__img{
-    z-index: 1;
-    object-fit: cover;
-    width: 100%;
-    height: 190px;
-    border-radius: 16px 16px 0px 0px;
-}
-.restaurant-card__description{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 20px 5px 20px;
-}
-.restaurant-card__nameAndLocation{
-    display: flex;
-    flex-direction: column;
-}
-.restaurant-card__name{
-    font-family: 'Roboto';
-    font-size: 18px;
-    margin-bottom: -10px;
-    margin-top: 5px;
-}
-.restaurant-card__location{
-    font-family: 'Roboto';
-    font-size: 16px;
+    background-color: $white;
+    @include shadow;
+    @include generic-radius;
+    &__tag{
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        justify-content: flex-end;
+        width: 90%;
+        margin:15px 0px 0px -15px;
+    }
+    &__img{
+        object-fit: cover;
+        width:100%;
+        height:180px;
+        border-radius: 16px 16px 0px 0px;
+    }
+    &__description{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 10px 5% 0px 5%;
+    }
+    &__nameAndLocation{
+       @include column-fromStart;
+       height: fit-content;
+    }
+    &__name{
+        margin-top: 0px;
+    }
+    &__location{
+        margin-top: -10px;
+        font-size: 0.9em;
+    }
 }
 
-.new-sticker{
-    display: flex;
-    justify-content: center;
-    width: 70px;
-    padding:5px;
-    font-family: 'Roboto';
-    color: green;
-    background-color: #99E2D0;
-    border-radius: 6px;
+.rest-prev .fa-heart{
+    color: gray;
+    font-size: 1.4em;
+    &:hover{
+        font-weight: bold;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color:transparent;
+        @include pinkAndPurple-bg;
+    }
 }
+
+
+
 

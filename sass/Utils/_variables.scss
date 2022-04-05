@@ -4,4 +4,9 @@ $green: #99E2D0;
 $gray: #EAEAEA;
 $black: #262627;
 $white:#fffefc;
+
 $gray-lighten: lighten(#EAEAEA,5%);
+$purple-lighten: lighten(#9356DC,35%);
+$black-lighten: lighten(#262627,15%);
+
+$green-darken: darken(#99E2D0,35%)
