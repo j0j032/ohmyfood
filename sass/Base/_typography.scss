@@ -6,11 +6,12 @@ p{
     font-weight: 100;
 }
 
-.rest-menu > p {
+.menu__dishes > p {
     font-size: 1.2em;
     font-weight: 300;
     color: $black-lighten;
 }
+
 
 .column-repeater__element > p {
     font-size: 0.8em;
@@ -22,6 +23,10 @@ h1{
 }
 .home h1{
         font-family: 'Roboto',sans-serif;
+}
+
+.menu h1{
+    font-size: 26px;
 }
 
 

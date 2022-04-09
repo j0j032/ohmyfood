@@ -27,8 +27,8 @@
     margin:0px 20px 0px -10px;
 }
 
-.fa-store{
-    color: $purple
+.fonctionnement__icon{
+    color:black
 }
 
 .cards-repeater{
@@ -40,7 +40,9 @@
 
 .new-sticker{
     @include centered;
-    width: 20%;
+    width: 60px;
+    max-width: 60px;
+    height: 20px;
     padding: 2% 5% 2% 5%;
     color: $green-darken;
     background-color: $green;
@@ -92,10 +94,6 @@
     color: gray;
     font-size: 1.4em;
     &:hover{
-        font-weight: bold;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color:transparent;
-        @include pinkAndPurple-bg;
+       @include favorite-hover;
     }
 }

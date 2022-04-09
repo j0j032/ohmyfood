@@ -5,6 +5,15 @@
     background-image: linear-gradient(to bottom right, $purple, $pink );
 }
 
+@mixin favorite-hover{
+    transition: color 0.5s;
+    font-weight: bold;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color:transparent;
+    @include pinkAndPurple-bg;
+}
+
 
 @mixin shadow {
     box-shadow: 2px 2px 5px 2px lightgray;

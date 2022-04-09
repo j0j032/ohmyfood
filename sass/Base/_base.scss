@@ -6,10 +6,6 @@ a{
      text-decoration: none;
      color: $black;
      &:hover{
-        font-weight: bold;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color:transparent;
-        @include pinkAndPurple-bg;
+        @include favorite-hover;
     }
  }

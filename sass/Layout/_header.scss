@@ -4,20 +4,20 @@
     height:70px;
     width: 100%;
     &__logo{
-        width: 45%;
+        width: 180px;
         height: 100%;
+        max-height: 100px;
         &--withBtn{
-            width: 45%;
+            width: 180px;
             height: 100%;
-            margin-left: -100px;
         }
     }
     &__back-btn{
-        width:10%;
         border: none;
         background-color: transparent;
         font-size: 1.5em;
-        margin-left: -80px;
-        margin-right: -60px;
+    }
+    &__whiteSpace{
+        width:40px
     }
 }
