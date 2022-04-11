@@ -7,8 +7,9 @@
         <script src="https://kit.fontawesome.com/46ae58ead9.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="public/css/style.css">
+        <link rel="stylesheet" href="public/css/normalize.css">
         <link rel="shortcut icon" href="" sizes="16x16">
-        <title></title>
+        <title>ohmyfood-La palette du goût</title>
 
         <body>
             <header class="header">
@@ -20,43 +21,151 @@
             <main class="menu">
                 <img class="menu__cover" src="public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo montrant un plat du restaurant La palette du goût">
                 <div class="menu__container bg-container">
-                    <div class="inline-spacer menu__heading">
+                    <div class="menu__heading">
                         <h1>La palette du goût</h1>
                         <i class="fa-regular fa-heart"></i>
                     </div>
+
                     <div class="menu__dishes">
                         <p>Entrées</p>
                         <div class="half-border"></div>
-                        <div class="column-repeater">
-                            <div class="column-repeater__element--dish">
-                                <div class="inline-effect">
-                                    <div class="dish">
+
+                        <div class="column-repeater dish">
+                            <div class="dish__elements">
+                                <div class="dish__content">
+                                    <div class="dish__description">
                                         <h3 class="dish__heading">Fricassé d'escargot</h3>
-                                        <div class="inline-spacer dish__description">
-                                            <p class="dish__ingredients">Au piment d'espelette blalblanalabejhkdfkdhfkdhfkdfhdkfhdkla</p>
-                                            <p class="dish__price">35€</p>
-                                        </div>
+                                        <p class="dish__ingredients">Au piment d'espelette </p>
                                     </div>
-                                    <div class="dish__check"> 
-                                        <i class="fa-solid fa-circle-check"></i>
-                                    </div>
+                                    <p class="dish__price">25€</p>
+                                </div>
+                                <div class="dish__check"> 
+                                    <i class="fa-solid fa-circle-check"></i>
                                 </div>
                             </div>
-                            <div class="column-repeater__element--dish">
-                                <div class="inline-effect">
-                                    <div class="dish">
-                                        <h3 class="dish__heading">Fricassé d'escargot</h3>
-                                        <div class="inline-spacer dish__description">
-                                            <p class="dish__ingredients">Au piment d'espelette blalblanalabejhkdfkdhfkdhfkdfhdkfhdkla</p>
-                                            <p class="dish__price">35€</p>
-                                        </div>
+                            
+                            <div class="dish__elements">
+                                <div class="dish__content">
+                                    <div class="dish__description">
+                                        <h3 class="dish__heading">Foie gras de canard mi-cuit</h3>
+                                        <p class="dish__ingredients">Et ses copeaux de truffe noire</p>
                                     </div>
-                                    <div class="dish__check"> 
-                                        <i class="fa-solid fa-circle-check"></i>
+                                    <p class="dish__price">35€</p>
+                                </div>  
+                                <div class="dish__check"> 
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                            </div>
+
+                            <div class="dish__elements">
+                                <div class="dish__content">
+                                    <div class="dish__description">
+                                        <h3 class="dish__heading">Oeuf au plat</h3>
+                                        <p class="dish__ingredients">Assaisonné à la truffe sur lit de caviar</p>
                                     </div>
+                                    <p class="dish__price">20€</p>
+                                </div>  
+                                <div class="dish__check"> 
+                                    <i class="fa-solid fa-circle-check"></i>
                                 </div>
                             </div>
                         </div>
+
+                    </div>
+
+                    <div class="menu__dishes">
+                        <p>Plats</p>
+                        <div class="half-border"></div>
+
+                        <div class="column-repeater dish">
+                            <div class="dish__elements">
+                                <div class="dish__content">
+                                    <div class="dish__description">
+                                        <h3 class="dish__heading">Filet de boeuf aux herbes</h3>
+                                        <p class="dish__ingredients">Accompagné de sa ribambelle de légumes</p>
+                                    </div>
+                                    <p class="dish__price">40€</p>
+                                </div>
+                                <div class="dish__check"> 
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="dish__elements">
+                                <div class="dish__content">
+                                    <div class="dish__description">
+                                        <h3 class="dish__heading">Parmentier de queue de boeuf</h3>
+                                        <p class="dish__ingredients">À la truffe noire sur sa purée de panais</p>
+                                    </div>
+                                    <p class="dish__price">35€</p>
+                                </div>  
+                                <div class="dish__check"> 
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                            </div>
+
+                            <div class="dish__elements">
+                                <div class="dish__content">
+                                    <div class="dish__description">
+                                        <h3 class="dish__heading">Filet de turbot</h3>
+                                        <p class="dish__ingredients">Aux agrumes</p>
+                                    </div>
+                                    <p class="dish__price">44€</p>
+                                </div>  
+                                <div class="dish__check"> 
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu__dishes">
+                        <p>Desserts</p>
+                        <div class="half-border"></div>
+
+                        <div class="column-repeater dish">
+                            <div class="dish__elements">
+                                <div class="dish__content">
+                                    <div class="dish__description">
+                                        <h3 class="dish__heading">Paris-Brest</h3>
+                                        <p class="dish__ingredients">Revisité</p>
+                                    </div>
+                                    <p class="dish__price">18€</p>
+                                </div>
+                                <div class="dish__check"> 
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="dish__elements">
+                                <div class="dish__content">
+                                    <div class="dish__description">
+                                        <h3 class="dish__heading">Macaron au chocolat d'exception</h3>
+                                        <p class="dish__ingredients">Et glace à la vanille de Madagascar</p>
+                                    </div>
+                                    <p class="dish__price">22€</p>
+                                </div>  
+                                <div class="dish__check"> 
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                            </div>
+
+                            <div class="dish__elements">
+                                <div class="dish__content">
+                                    <div class="dish__description">
+                                        <h3 class="dish__heading">Mousse au chocolat </h3>
+                                        <p class="dish__ingredients">Au piment d'Espelette et à la truffe noire</p>
+                                    </div>
+                                    <p class="dish__price">23€</p>
+                                </div>  
+                                <div class="dish__check"> 
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu__orderBtn">
+                        <button class="btn">Commander</button>
                     </div>
                 </div>
             </main>

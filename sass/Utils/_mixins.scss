@@ -14,7 +14,6 @@
     @include pinkAndPurple-bg;
 }
 
-
 @mixin shadow {
     box-shadow: 2px 2px 5px 2px lightgray;
 }
@@ -30,6 +29,12 @@
     height: 70px;
     @include generic-radius;
     @include shadow;
+}
+
+@mixin overflow {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 @mixin column-centered {
@@ -49,4 +54,18 @@
     align-items: center;
     justify-content: center;
     padding: 5px;
+}
+
+@mixin inLine-spacer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin cascade-delay{
+    @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+            animation-delay: 200ms * $i;
+        }
+    }
 }

@@ -1,72 +1,14 @@
-.heading__container{
-    width:90%;
-    margin: 20px 0px 0px 0px;
-    display: flex;
-    justify-content: flex-start;
-}
-
 .column-repeater{
     @include column-centered;
+    width: 100%;
     gap:20px;
-    &__element{
-        @include item;
-        &--gray{
-            @include item;
-            background-color: $gray-lighten;
-            &:hover{
-                background-color: $purple-lighten;
-                .fonctionnement__icon{
-                    color: $purple;
-                }
-            }
-        }
-        &--grayActive{
-            @include item;
-            background-color: $purple-lighten;
-            .fonctionnement__icon{
-                color: $purple;
-            }
-        }
-        &--dish{
-            animation: apparition 0.8s ease-out;
-            @include item;
-            @include column-fromStart;
-            width:100%;
-            height: 70px;
-            padding: 0px 0% 0px 2%;
-            &:hover{
-                .dish__check{
-                    /* animation: slideIn 1s forwards; */
-                    width:20%;
-                }
-                .dish__description{
-                    width:80%;
-                }
-                .dish__price{
-                    margin-right:-30px;
-                }
-                .fa-circle-check{
-                    transform: rotate(360deg);
-                }
-            }
-        }
-    }
 }
-
 
 .bg-container{
     width: 100%;
-    height: fit-content;
     background-color: $gray-lighten;
+    padding-bottom: 70px;
 }
-
-.inline-spacer{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 
 @keyframes apparition{
     from{

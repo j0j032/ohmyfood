@@ -12,6 +12,7 @@
         border-radius: 40px 40px 0px 0px ;
     }
     &__heading{
+        @include inLine-spacer;
         width: 90%;
         margin: 5% 5% -20px 5%;
         .fa-regular{
@@ -27,42 +28,77 @@
         width: 90%;
         margin:5%;
     }
+    &__orderBtn{
+        transform: translateX(5%);
+        @include centered;
+        width: 90%;
+        .btn{
+            max-width: 200px;
+        }
+    }
 }
 
+
 .dish{
-    min-width: 80%;
-    max-width: 100%;
-    &__heading{
-        margin: 15px 0px -10px 10px;
-        max-width: 80%;
+    margin-top: 30px;
+        &__elements{
+        @include item;
+        background-color: $white;
+        overflow: hidden;
+        width:100%;
+        max-width: 370px;
+        padding: 0px 0% 0px 4%;
+        @include cascade-delay;
+        animation: apparition 1s ease-out;
+        &:hover{
+            .dish__check{
+                width: 20%;
+                transform: translateX(0%);
+                transition: 0.5s ease;
+                margin-left: 3%;
+            }
+            .fa-circle-check{
+                transform: rotate(-360deg);
+                animation: checkSpin 0.5s;
+            }
+            .dish__price{
+                margin-left: -2%;
+                margin-right: 5%;
+            }
+        }
+    }
+    &__content{
+        @include inLine-spacer;
+        width: 100%;
     }
     &__description{
-        margin-left: 10px;
-        width: 100%;
-        transition: width 1s;
+        width: 80%;
+        > .dish__heading{
+           @include overflow;
+        }
         > .dish__ingredients{
-            font-weight: 200;
-            font-size: 14px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
+            @include overflow;
+            margin-top: -10px;
         }
     }
     &__price{
-        transition: margin-right 1s;
+        transition: margin 0.5s;
+        transition-delay: 0.2s;
         font-weight: 700;
-        margin-left: 10px;
-        margin-right: 15px;
+        margin-bottom: -10px;
+        margin-right: 2%;
     }
     &__check{
-        width:0px;
-        transition: width 1s;
-        transition: opacity 0.5s;
-        opacity: 0;
         @include centered;
+        width:0%;
+        transition: width 0.5s;
         border-radius: 0px 20px 20px 0px;
         height:60px;
         background-color: $green;
+        transition: margin-left 0.5s;
+        transition-delay: 0.5s;
+        transform: translateX(100%);
+        transition: 0.5s ease;
     }
 }
 
@@ -73,31 +109,8 @@
     border-top: solid 3px $green;
 }
 
-.inline-effect{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
 .fa-circle-check{
     color: $white;
     font-size: 24px;
-    transform: rotate(-360deg);
-    transition: transform 1000ms ease-in-out;
-}
-
-@keyframes slideIn{
-    0%{
-        width:0px;
-        opacity: 0;
-    }
-
-    10%{
-        opacity: 1;
-    }
-
-    100%{
-        width:20%;
-        opacity: 1;
-    }
+    transition: 0.5s ease-in-out;
 }

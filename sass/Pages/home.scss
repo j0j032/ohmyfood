@@ -2,18 +2,41 @@
     @include column-centered;
     text-align: center;
     & h1{
-        margin: 40px 5% 0px 5%;
+        margin-top: 40px ;
+        max-width: 70%;
     }
     & p{
         margin: 20px 5% 0px 5%;
+        max-width: 80%;
     }
 }
 
-.fonctionnement__container{
-    @include column-centered;
-    gap:20px;
+
+.fonctionnement{
     margin-bottom: 60px;
-    margin-left: 10px;
+    &__icon{
+        color:$gray-darken;
+    }
+    &__element{
+        @include item;
+        &--gray{
+            @include item;
+            background-color: $gray-lighten;
+            &:hover{
+                background-color: $purple-lighten;
+                .fonctionnement__icon{
+                    color: $purple;
+                }
+            }
+        }
+        &--grayActive{
+            @include item;
+            background-color: $purple-lighten;
+            .fonctionnement__icon{
+                color: $purple;
+            }
+        }
+    }
 }
 
 .purple-dot__container{
@@ -25,17 +48,6 @@
     color: $white;
     @include generic-radius;
     margin:0px 20px 0px -10px;
-}
-
-.fonctionnement__icon{
-    color:black
-}
-
-.cards-repeater{
-    @include column-centered;
-    width: 100%;
-    margin-top: -20px;
-    margin-bottom: 40px;
 }
 
 .new-sticker{
@@ -52,8 +64,6 @@
 .rest-prev{
     width: 90%;
     height: fit-content;
-    padding-bottom: 0px;
-    margin-bottom: 25px;
     background-color: $white;
     @include shadow;
     @include generic-radius;
@@ -72,9 +82,8 @@
         border-radius: 16px 16px 0px 0px;
     }
     &__description{
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
+       @include inLine-spacer;
+       align-items: flex-start;
         padding: 10px 5% 0px 5%;
     }
     &__nameAndLocation{

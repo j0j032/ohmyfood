@@ -1,0 +1,26 @@
+@keyframes checkSpin {
+    0%{
+        font-size: 12px;
+    }
+    
+    100%{
+        font-size: 24px;
+    }
+
+}
+
+@keyframes apparition {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    50% {
+      opacity:0.2;
+    }
+
+    100%{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
