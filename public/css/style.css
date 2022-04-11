@@ -19,6 +19,23 @@
     transform: translateY(0px);
   }
 }
+@keyframes loading-bg {
+  from {
+    opacity: 0.63;
+  }
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 body {
   margin: 0%;
 }
@@ -98,7 +115,41 @@ h6 {
   box-shadow: 2px 2px 5px 2px lightgray;
 }
 .btn:hover {
-  background-image: linear-gradient(to bottom right, #9356DC, #FF79DA);
+  box-shadow: 2px 2px 10px 4px lightgray;
+  background-image: linear-gradient(to bottom right, #ff93e1, #a16be0);
+}
+
+.loader {
+  color: #fffefc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  position: fixed;
+  inset: 0px;
+  z-index: 4;
+  background-image: linear-gradient(to bottom right, #ff93e1, #a16be0);
+  width: 100%;
+  height: 100vh;
+  animation: loading-bg 0.1s 3s forwards;
+}
+
+.spin__container {
+  font-size: 40px;
+  font-family: "shrikhand";
+  display: flex;
+}
+.spin__o {
+  animation: rotation 1s infinite;
+}
+.spin__o:nth-child(1) {
+  animation-delay: 200ms;
+}
+.spin__o:nth-child(2) {
+  animation-delay: 400ms;
+}
+.spin__o:nth-child(3) {
+  animation-delay: 600ms;
 }
 
 .header {

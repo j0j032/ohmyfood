@@ -1,0 +1,22 @@
+.loader{
+    color: $white;
+    @include centered;
+    position:fixed;
+    inset:0px;
+    z-index: 4;
+    @include pinkAndPurple-bg-lighten;
+    width:100%;
+    height:100vh;
+    animation: loading-bg 0.1s 3s forwards;
+}
+.spin{
+    &__container{
+        font-size: 40px;
+        font-family: "shrikhand";
+        display: flex;
+    }
+    &__o{
+        @include cascade-delay;
+        animation: rotation 1s infinite;
+    }
+}

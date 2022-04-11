@@ -11,6 +11,6 @@
     @include pinkAndPurple-bg;
     @include shadow;
         &:hover{
-            @include purpleAndPink-bg;
+            @include btn-hover;
         }
 }
