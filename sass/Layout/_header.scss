@@ -21,3 +21,23 @@
         width:40px
     }
 }
+
+@media all and (min-width:700px) {  
+    .header{
+        @include inLine-spacer;
+        &__whiteSpace{
+            display: none;
+        }
+        &__logo{
+            margin-left: 3%;
+            &--withBtn{
+                order: 1;
+                margin-left: 3%;
+            }
+        }
+        &__back-btn{
+            order: 2;
+            margin-right: 3%;
+        }
+    }
+}

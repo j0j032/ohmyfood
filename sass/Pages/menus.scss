@@ -37,6 +37,9 @@
         }
     }
 }
+.all-dishes{
+    width: auto;
+}
 
 .dish{
     margin-top: 30px;
@@ -45,7 +48,7 @@
         background-color: $white;
         overflow: hidden;
         width:100%;
-        max-width: 370px;
+        max-width: 400px;
         padding: 0px 0% 0px 4%;
         @include cascade-delay;
         animation: apparition 1s ease-out;
@@ -112,4 +115,25 @@
     color: $white;
     font-size: 24px;
     transition: 0.5s ease-in-out;
+}
+
+@media all and (min-width:700px) {   
+   .menu{
+        display: flex;
+        &__container{
+            overflow: scroll;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 400px;
+            max-height: 390px;
+            position: absolute;
+            top: 30%;
+            right:10%;
+            border-radius: 20px;
+            box-shadow: inset 4px 4px 2px 2px $white, 4px 4px 10px 0px $gray-darken,-10px -10px 10px 0px $white, 20px 20px 0px 0px $white;
+        }
+        &__cover{
+            height: 1000px;
+        }
+   }
 }
