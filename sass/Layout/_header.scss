@@ -1,10 +1,43 @@
 .header{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     height:70px;
     width: 100%;
     &__logo{
-        width: 45%;
+        width: 180px;
         height: 100%;
+        max-height: 100px;
+        &--withBtn{
+            width: 180px;
+            height: 100%;
+        }
+    }
+    &__back-btn{
+        border: none;
+        background-color: transparent;
+        font-size: 1.5em;
+    }
+    &__whiteSpace{
+        width:40px
+    }
+}
+
+@media all and (min-width:700px) {  
+    .header{
+        @include inLine-spacer;
+        &__whiteSpace{
+            display: none;
+        }
+        &__logo{
+            margin-left: 3%;
+            &--withBtn{
+                order: 1;
+                margin-left: 3%;
+            }
+        }
+        &__back-btn{
+            order: 2;
+            margin-right: 3%;
+        }
     }
 }

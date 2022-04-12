@@ -1,0 +1,12 @@
+.column-repeater{
+    @include column-centered;
+    width: 100%;
+    gap:20px;
+}
+
+.bg-container{
+    width: 100%;
+    background-color: $gray-lighten;
+    padding-bottom: 70px;
+}
+

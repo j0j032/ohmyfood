@@ -1,0 +1,23 @@
+.footer{
+    background-color:$black;
+    padding: 5%;
+    @include column-fromStart;
+    &__logo{
+        font-size: 1em;
+        color: $white;
+        margin-bottom: 0px;
+    }
+    .nav__link a{
+        color: $white;
+        font-size: 0.8em;
+        margin-left: -40px;
+    }
+}
+
+.fa-utensils{
+    margin-right: 10px;
+}
+.fa-handshake-angle{
+    margin-right: 5px;
+}
+

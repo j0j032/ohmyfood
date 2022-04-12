@@ -1,0 +1,139 @@
+.menu{
+    &__cover{
+        z-index: 0;
+        object-fit: cover;
+        width: 100%;
+    }
+    &__container{
+        position: relative;
+        z-index: 1;
+        margin-top: -50px;
+        @include column-fromStart;
+        border-radius: 40px 40px 0px 0px ;
+    }
+    &__heading{
+        @include inLine-spacer;
+        width: 90%;
+        margin: 5% 5% -20px 5%;
+        .fa-regular{
+            font-size: 28px;
+            color: $gray-darken;
+            margin-right: 10px;
+            &:hover{
+            @include favorite-hover;
+            }
+        }
+    }
+    &__dishes{
+        width: 90%;
+        margin:5%;
+    }
+    &__orderBtn{
+        transform: translateX(5%);
+        @include centered;
+        width: 90%;
+        .btn{
+            max-width: 200px;
+        }
+    }
+}
+.all-dishes{
+    width: auto;
+}
+
+.dish{
+    margin-top: 30px;
+        &__elements{
+        @include item;
+        background-color: $white;
+        overflow: hidden;
+        width:100%;
+        max-width: 400px;
+        padding: 0px 0% 0px 4%;
+        @include cascade-delay;
+        animation: apparition 1s ease-out;
+        &:hover{
+            .dish__check{
+                width: 20%;
+                transform: translateX(0%);
+                transition: 0.5s ease;
+                margin-left: 3%;
+            }
+            .fa-circle-check{
+                transform: rotate(-360deg);
+                animation: checkSpin 0.5s;
+            }
+            .dish__price{
+                margin-left: -2%;
+                margin-right: 5%;
+            }
+        }
+    }
+    &__content{
+        @include inLine-spacer;
+        width: 100%;
+    }
+    &__description{
+        width: 80%;
+        > .dish__heading{
+           @include overflow;
+        }
+        > .dish__ingredients{
+            @include overflow;
+            margin-top: -10px;
+        }
+    }
+    &__price{
+        transition: margin 0.5s;
+        transition-delay: 0.2s;
+        font-weight: 700;
+        margin-bottom: -10px;
+        margin-right: 2%;
+    }
+    &__check{
+        @include centered;
+        width:0%;
+        transition: width 0.5s;
+        border-radius: 0px 20px 20px 0px;
+        height:60px;
+        background-color: $green;
+        transition: margin-left 0.5s;
+        transition-delay: 0.5s;
+        transform: translateX(100%);
+        transition: 0.5s ease;
+    }
+}
+
+.half-border{
+    position: absolute;
+    margin-top: -15px;
+    width:40px;
+    border-top: solid 3px $green;
+}
+
+.fa-circle-check{
+    color: $white;
+    font-size: 24px;
+    transition: 0.5s ease-in-out;
+}
+
+@media all and (min-width:700px) {   
+   .menu{
+        display: flex;
+        &__container{
+            overflow: scroll;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 400px;
+            max-height: 390px;
+            position: absolute;
+            top: 30%;
+            right:10%;
+            border-radius: 20px;
+            box-shadow: inset 4px 4px 2px 2px $white, 4px 4px 10px 0px $gray-darken,-10px -10px 10px 0px $white, 20px 20px 0px 0px $white;
+        }
+        &__cover{
+            height: 1000px;
+        }
+   }
+}

@@ -5,8 +5,11 @@
     justify-content: space-evenly;
     background-color: $gray;
     box-shadow: inset 0px 1px 2px rgb(197, 196, 196);
+    &__icon{
+        margin-left: 20px;
+    }
     &__field{
-        margin-right: -20px;
+        margin-left: 10px;
         border: none;
         background-color: $gray;
             &:focus{

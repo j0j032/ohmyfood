@@ -1,3 +1,76 @@
+@mixin pinkAndPurple-bg{
+    background-image: linear-gradient(to bottom right, $pink, $purple);
+}
+@mixin pinkAndPurple-bg-lighten{
+    background-image: linear-gradient(to bottom right, $pink-lighten, $purple-lighten-stronger);
+}
+
+@mixin favorite-hover{
+    transition: color 0.5s;
+    font-weight: bold;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color:transparent;
+    @include pinkAndPurple-bg;
+}
+
 @mixin shadow {
     box-shadow: 2px 2px 5px 2px lightgray;
+}
+
+@mixin generic-radius {
+    border-radius: 20px;
+}
+
+@mixin item {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 70px;
+    @include generic-radius;
+    @include shadow;
+}
+
+@mixin overflow {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin column-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin column-fromStart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@mixin centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+@mixin inLine-spacer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin cascade-delay{
+    @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+            animation-delay: 200ms * $i;
+        }
+    }
+}
+
+@mixin btn-hover{
+    box-shadow: 2px 2px 10px 4px lightgray;
+    @include pinkAndPurple-bg-lighten;
 }

@@ -1,70 +1,11 @@
 body{
-    font-family: 'Roboto';
     margin: 0%;
 }
 
-p{
-    font-weight: 100;
-}
-
-h6{
-    margin-left: 20px;
-    font-size: 14px;
-}
-
-.container{
-    padding:6%;
-}
-
-.column-repeater{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap:20px;
-    &__element{
-        display: flex;
-        align-items: center;
-        width: 90%;
-        height: 70px;
-        background-color: $gray-lighten;
-        border-radius: 20px;
-        @include shadow;
-    }
-}
-
-/*_________________*/
-
-h3{
-    font-family: 'Roboto',sans-serif;
-    font-size: 22px;
-}
-
-h6{
-    margin-left: 20px;
-    font-family: 'Roboto';
-    font-size: 16px;
-}
-
-
-
-.thinText{
-    font-family: 'Roboto';
-    font-size: 18px;
-    font-weight: 400;
-    text-align: center;
-}
-
-.sectionHeader{
-    margin-left: 20px;
-}
-
-.favorite{
-    font-size: 22px;
-}
- a{
+a{
      text-decoration: none;
-     color: black;
+     color: $black;
+     &:hover{
+        @include favorite-hover;
+    }
  }
-a:hover{
-color: #9356DC;
-}
