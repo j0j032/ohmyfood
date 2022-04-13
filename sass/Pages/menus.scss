@@ -47,7 +47,7 @@
         @include item;
         background-color: $white;
         overflow: hidden;
-        width:100%;
+        width:96%;
         max-width: 400px;
         padding: 0px 0% 0px 4%;
         @include cascade-delay;
@@ -67,14 +67,21 @@
                 margin-left: -2%;
                 margin-right: 5%;
             }
+            .dish__content{
+                width: 80%;
+            }
         }
     }
     &__content{
         @include inLine-spacer;
+        @include overflow;
+        transition: width 0.5s;
         width: 100%;
+        padding-right: 10px;
     }
     &__description{
-        width: 80%;
+        min-width: 80%;
+        margin-right: 5%;
         > .dish__heading{
            @include overflow;
         }
@@ -84,11 +91,12 @@
         }
     }
     &__price{
+        width: 20%;
         transition: margin 0.5s;
         transition-delay: 0.2s;
         font-weight: 700;
         margin-bottom: -10px;
-        margin-right: 2%;
+        margin-left: 5%;
     }
     &__check{
         @include centered;
