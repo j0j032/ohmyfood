@@ -22,3 +22,15 @@
             }
     }
 }
+
+@include mobile{
+    .form--desktop{
+        display: none;
+    }
+}
+
+@include desktop{
+    .form{
+        display: none;
+    }
+}

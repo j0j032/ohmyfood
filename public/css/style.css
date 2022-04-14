@@ -240,6 +240,16 @@ h6 {
   font-weight: 500;
 }
 
+@media screen and (max-width: 700px) {
+  .form--desktop {
+    display: none;
+  }
+}
+@media screen and (min-width: 700px) {
+  .form {
+    display: none;
+  }
+}
 .footer {
   background-color: #262627;
   padding: 5%;
