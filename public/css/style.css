@@ -472,7 +472,7 @@ h6 {
   box-shadow: 2px 2px 5px 2px lightgray;
   background-color: #fffefc;
   overflow: hidden;
-  width: 100%;
+  width: 96%;
   max-width: 400px;
   padding: 0px 0% 0px 4%;
   animation: apparition 1s ease-out;
@@ -500,14 +500,23 @@ h6 {
   margin-left: -2%;
   margin-right: 5%;
 }
+.dish__elements:hover .dish__content {
+  width: 80%;
+}
 .dish__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: width 0.5s;
   width: 100%;
+  padding-right: 10px;
 }
 .dish__description {
-  width: 80%;
+  min-width: 80%;
+  margin-right: 5%;
 }
 .dish__description > .dish__heading {
   overflow: hidden;
@@ -521,11 +530,12 @@ h6 {
   margin-top: -10px;
 }
 .dish__price {
+  width: 20%;
   transition: margin 0.5s;
   transition-delay: 0.2s;
   font-weight: 700;
   margin-bottom: -10px;
-  margin-right: 2%;
+  margin-left: 5%;
 }
 .dish__check {
   display: flex;
