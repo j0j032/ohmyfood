@@ -39,7 +39,7 @@
 
 @mixin column-centered {
     display: flex;
-    flex-direction: column;
+    @content;
     align-items: center;
 }
 
@@ -63,7 +63,7 @@
 }
 
 @mixin cascade-delay{
-    @for $i from 1 through 3 {
+    @for $i from 1 through 4 {
         &:nth-child(#{$i}) {
             animation-delay: 200ms * $i;
         }
@@ -74,6 +74,17 @@
     box-shadow: 2px 2px 10px 4px lightgray;
     @include pinkAndPurple-bg-lighten;
 }
+
+@mixin flexBox-bg-direction($value,$direction){
+    background-color:$value;
+    flex-direction: $direction;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Responsive ________________________________________________________________________*/
 
 @mixin mobile{
     $breakpoints:(mobile:700px);

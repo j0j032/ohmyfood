@@ -14,3 +14,7 @@
             @include btn-hover;
         }
 }
+.btn > a{
+    color:$white;
+    font-weight: 400;
+}

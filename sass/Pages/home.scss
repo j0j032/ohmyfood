@@ -1,6 +1,7 @@
 .explore{
-    @include column-centered;
+    @include flexBox-bg-direction($gray-lighten,column);
     text-align: center;
+    padding-bottom: 70px;
     & h1{
         margin-top: 40px ;
         max-width: 70%;
@@ -11,9 +12,15 @@
     }
 }
 
-
 .fonctionnement{
+    @include flexBox-bg-direction(transparent,column);
     margin-bottom: 60px;
+    gap: 20px;
+    &__steps{
+        @include flexBox-bg-direction(transparent,column);
+        width: 100%; 
+        gap: 20px;
+    }
     &__icon{
         color:$gray-darken;
     }
@@ -39,6 +46,18 @@
     }
 }
 
+.restaurants{
+    @include flexBox-bg-direction($gray-lighten,column);
+    width: 100%;
+    padding-bottom: 70px;
+    gap:20px;
+    &__cards{
+        @include flexBox-bg-direction(transparent,column);
+        gap:20px;
+        width: 100%;
+    }
+}
+
 .purple-dot__container{
     @include centered;
     width: 15px;
@@ -50,16 +69,6 @@
     margin:0px 20px 0px -10px;
 }
 
-.new-sticker{
-    @include centered;
-    width: 60px;
-    max-width: 60px;
-    height: 20px;
-    padding: 2% 5% 2% 5%;
-    color: $green-darken;
-    background-color: $green;
-    border-radius: 4px;
-}
 
 .rest-prev{
     width: 90%;
@@ -68,12 +77,27 @@
     @include shadow;
     @include generic-radius;
     &__tag{
-        position: absolute;
+        position: relative;
         z-index: 2;
-        display: flex;
-        justify-content: flex-end;
-        width: 90%;
-        margin:15px 0px 0px -15px;
+        top: 10px;
+        left:60%;
+    }
+    &__new{
+        position: relative;
+        &::before{
+            content: "Nouveau";
+            position: absolute;
+            top:1rem;
+            right: 1rem;
+            @include centered;
+            width: 60px;
+            height: 20px;
+            padding: 2% 5% 2% 5%;
+            color: $green-darken;
+            background-color: $green;
+            border-radius: 4px;
+        }
+
     }
     &__img{
         object-fit: cover;
@@ -105,4 +129,54 @@
     &:hover{
        @include favorite-hover;
     }
+}
+
+/* Responsive Desktop ___________________________________________*/
+
+@include desktop{
+    .home h1{
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    .explore{
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        >h1{
+            font-size: 40px;
+        }
+        >p{
+            font-size: 22px;
+        }
+    }
+    .fonctionnement{
+        padding-bottom: 40px;
+        &__steps {
+        @include flexBox-bg-direction(transparent,row);
+        width:90%;
+        }
+    }
+    .restaurants{
+        padding-bottom: 200px;
+        &__cards{
+        @include flexBox-bg-direction(transparent,row);
+        overflow-x: auto;
+        white-space: nowrap;
+        justify-content: flex-start;
+        width:90%;
+        padding: 0% 2.5% 2.5% 2.5%;
+        }
+    }
+    .rest-prev{
+        flex: 0 0 auto;
+        width:300px;
+        justify-content: flex-start;
+        max-width: 300px;
+        &__img{
+            height: 250px;
+        }
+        &:hover{
+            animation: cardsHover 0.5s forwards;
+        }
+    }      
 }

@@ -44,3 +44,12 @@
       transform: rotate(360deg);
     }
   }
+
+  @keyframes cardsHover {
+    from{
+      transform:translateY(0px);
+    }
+    to{
+      transform: translateY(10px);
+    } 
+  }
