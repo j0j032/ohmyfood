@@ -727,6 +727,11 @@ h6 {
 }
 
 /* Responsive Desktop ___________________________________________*/
+@media screen and (max-width: 700px) {
+  .menu__cover {
+    max-height: 300px;
+  }
+}
 @media screen and (min-width: 700px) {
   .menu {
     display: flex;

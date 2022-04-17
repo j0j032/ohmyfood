@@ -132,8 +132,14 @@
 
 /* Responsive Desktop ___________________________________________*/
 
+@include mobile{
+    .menu__cover{
+        max-height: 300px;
+    }
+}
+
 @include desktop{   
-   .menu{
+    .menu{
         display: flex;
         &__container{
             justify-content: flex-start;
@@ -152,5 +158,5 @@
         &__cover{
             height: 1000px;
         }
-   }
+    }
 }
