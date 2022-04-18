@@ -15,11 +15,23 @@
 }
 
 @mixin shadow {
+    box-shadow: 2px 2px 10px 2px lightgray;
+}
+
+@mixin shadow--hover {
     box-shadow: 2px 2px 5px 2px lightgray;
 }
 
 @mixin generic-radius {
     border-radius: 20px;
+}
+
+@mixin home-heading{
+    font-family: 'Roboto',sans-serif;
+    font-size: 1.5em;
+    width:90%;
+    margin: 20px 0px 0px 0px;
+    margin-top: 60px;
 }
 
 @mixin item {
@@ -34,12 +46,14 @@
 @mixin overflow {
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; 
 }
 
-@mixin column-centered {
+@mixin flexBox-bg-direction($value,$direction){
+    background-color:$value;
+    flex-direction: $direction;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -63,7 +77,7 @@
 }
 
 @mixin cascade-delay{
-    @for $i from 1 through 3 {
+    @for $i from 1 through 4 {
         &:nth-child(#{$i}) {
             animation-delay: 200ms * $i;
         }
@@ -73,4 +87,20 @@
 @mixin btn-hover{
     box-shadow: 2px 2px 10px 4px lightgray;
     @include pinkAndPurple-bg-lighten;
+}
+
+/* Responsive ________________________________________________________________________*/
+
+@mixin mobile{
+    $breakpoints:(mobile:700px);
+    @media screen and (max-width:map-get($breakpoints, mobile)) {
+        @content;
+    }
+}
+
+@mixin desktop{
+    $breakpoints:(desktop:700px);
+    @media screen and (min-width:map-get($breakpoints, desktop)) {
+        @content;
+    }
 }

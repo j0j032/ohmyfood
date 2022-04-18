@@ -12,32 +12,62 @@
             height: 100%;
         }
     }
+    &__nav{
+        height: 100%;
+        @include inLine-spacer;
+    }
     &__back-btn{
         border: none;
         background-color: transparent;
         font-size: 1.5em;
+        margin-right: 60px;
     }
     &__whiteSpace{
-        width:40px
+        width:30px
     }
 }
+@include mobile{
+    .header__location{
+        display: none;
+    }
+}
+/* Responsive Desktop ___________________________________________*/
 
-@media all and (min-width:700px) {  
+@include desktop{  
     .header{
+        position: fixed;
+        width: 100%;
+        z-index: 3;
+        background-color: $white;
+        padding-top: 10px;
+        padding-bottom: 5px;
         @include inLine-spacer;
         &__whiteSpace{
             display: none;
         }
-        &__logo{
+        &__nav{
             margin-left: 3%;
-            &--withBtn{
-                order: 1;
-                margin-left: 3%;
-            }
+            width:230px;
         }
         &__back-btn{
-            order: 2;
             margin-right: 3%;
+        }
+        &__logo{
+            margin-left: 5%;
+            &--withBtn{
+                order: 1;
+            }
+        }
+        &__location{
+            order:2;
+            font-size: 1em;
+            font-family: "Roboto";
+            font-weight: 200;
+            margin-right: 5%;
+            >.fa-location-dot{
+                margin-right: 10px;
+                @include favorite-hover;
+            }
         }
     }
 }
