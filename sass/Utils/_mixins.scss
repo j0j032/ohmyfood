@@ -49,9 +49,11 @@
     text-overflow: ellipsis;
 }
 
-@mixin column-centered {
+@mixin flexBox-bg-direction($value,$direction){
+    background-color:$value;
+    flex-direction: $direction;
     display: flex;
-    @content;
+    justify-content: center;
     align-items: center;
 }
 
@@ -86,15 +88,6 @@
     box-shadow: 2px 2px 10px 4px lightgray;
     @include pinkAndPurple-bg-lighten;
 }
-
-@mixin flexBox-bg-direction($value,$direction){
-    background-color:$value;
-    flex-direction: $direction;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 
 /* Responsive ________________________________________________________________________*/
 

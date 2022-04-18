@@ -83,7 +83,7 @@ h1 {
 }
 
 .menu h1 {
-  font-size: 26px;
+  font-size: 1.5em;
 }
 
 h3 {
@@ -205,28 +205,32 @@ h6 {
   .header__whiteSpace {
     display: none;
   }
-  .header__logo {
+  .header__nav {
     margin-left: 3%;
-  }
-  .header__logo--withBtn {
-    order: 1;
-    margin-left: 3%;
+    width: 230px;
   }
   .header__back-btn {
     margin-right: 3%;
   }
-  .header__nav {
-    margin-left: 30px;
+  .header__logo--withBtn {
+    order: 1;
+    margin-left: 3%;
   }
   .header__location {
     order: 2;
     font-size: 1em;
     font-family: "Roboto";
     font-weight: 200;
-    margin-right: 40px;
+    margin-right: 5%;
   }
   .header__location > .fa-location-dot {
     margin-right: 10px;
+    transition: color 0.5s;
+    font-weight: bold;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   }
 }
 .nav {
@@ -297,6 +301,10 @@ h6 {
 
 .fa-handshake-angle {
   margin-right: 5px;
+}
+
+footer a:hover {
+  font-weight: 600;
 }
 
 .explore {
@@ -422,7 +430,7 @@ h6 {
   position: relative;
   z-index: 2;
   top: 10px;
-  left: 60%;
+  right: 10px;
 }
 .rest-prev__new {
   position: relative;
@@ -496,10 +504,10 @@ h6 {
     align-items: center;
   }
   .explore > h1 {
-    font-size: 40px;
+    font-size: 3em;
   }
   .explore > p {
-    font-size: 22px;
+    font-size: 2em;
   }
 
   .fonctionnement {
@@ -554,14 +562,12 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-items: flex-start;
   padding-bottom: 60px;
   width: 100%;
   position: relative;
   z-index: 1;
   margin-top: -50px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   border-radius: 40px 40px 0px 0px;
 }
 .menu__heading {
@@ -572,7 +578,7 @@ h6 {
   margin: 5% 5% -20px 5%;
 }
 .menu__heading .fa-regular {
-  font-size: 28px;
+  font-size: 1.8em;
   color: #9e9e9e;
   margin-right: 10px;
 }

@@ -83,7 +83,7 @@
         position: relative;
         z-index: 2;
         top: 10px;
-        left:60%;
+        right:10px;
     }
     &__new{
         position: relative;
@@ -146,10 +146,10 @@
         justify-content: center;
         align-items: center;
         >h1{
-            font-size: 40px;
+            font-size: 3em;
         }
         >p{
-            font-size: 22px;
+            font-size: 2em;
         }
     }
     .fonctionnement{

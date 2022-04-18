@@ -45,28 +45,28 @@
         &__whiteSpace{
             display: none;
         }
-        &__logo{
+        &__nav{
             margin-left: 3%;
+            width:230px;
+        }
+        &__back-btn{
+            margin-right: 3%;
+        }
+        &__logo{
             &--withBtn{
                 order: 1;
                 margin-left: 3%;
             }
         }
-        &__back-btn{
-            margin-right: 3%;
-        }
-        &__nav{
-            margin-left: 30px;
-        }
-    
         &__location{
             order:2;
             font-size: 1em;
             font-family: "Roboto";
             font-weight: 200;
-            margin-right: 40px;
+            margin-right: 5%;
             >.fa-location-dot{
                 margin-right: 10px;
+                @include favorite-hover;
             }
         }
     }

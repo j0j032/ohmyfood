@@ -6,12 +6,12 @@
     }
     &__container{
         @include flexBox-bg-direction($gray-lighten,column);
+        align-items: flex-start;
         padding-bottom: 60px;
         width: 100%;
         position: relative;
         z-index: 1;
         margin-top: -50px;
-        @include column-fromStart;
         border-radius: 40px 40px 0px 0px ;
     }
     &__heading{
@@ -19,7 +19,7 @@
         width: 90%;
         margin: 5% 5% -20px 5%;
         .fa-regular{
-            font-size: 28px;
+            font-size: 1.8em;
             color: $gray-darken;
             margin-right: 10px;
             &:hover{
