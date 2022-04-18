@@ -6,21 +6,14 @@ p{
     font-weight: 100;
 }
 
-.menu__dishes > p {
-    font-size: 1.2em;
-    font-weight: 300;
-    color: $black-lighten;
-}
-
 h1{
     font-family: 'Shrikhand';
 }
 .home h1{
-    font-family: 'Roboto',sans-serif;
-    font-size: 1.5em;
-    width:90%;
-    margin: 20px 0px 0px 0px;
-    margin-top: 60px;
+   @include home-heading;
+}
+.home h2{
+    @include home-heading;
 }
 
 .menu h1{
@@ -39,3 +32,4 @@ h6{
     font-size: 0.8em;
     margin-left: 1.3em;
 }
+

@@ -3,6 +3,7 @@
     padding: 5%;
     @include column-fromStart;
     &__logo{
+        font-family: shrikhand;
         font-size: 1em;
         color: $white;
         margin-bottom: 0px;

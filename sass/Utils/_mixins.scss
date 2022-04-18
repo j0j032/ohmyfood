@@ -15,11 +15,23 @@
 }
 
 @mixin shadow {
+    box-shadow: 2px 2px 10px 2px lightgray;
+}
+
+@mixin shadow--hover {
     box-shadow: 2px 2px 5px 2px lightgray;
 }
 
 @mixin generic-radius {
     border-radius: 20px;
+}
+
+@mixin home-heading{
+    font-family: 'Roboto',sans-serif;
+    font-size: 1.5em;
+    width:90%;
+    margin: 20px 0px 0px 0px;
+    margin-top: 60px;
 }
 
 @mixin item {

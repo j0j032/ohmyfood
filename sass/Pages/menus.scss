@@ -40,6 +40,13 @@
         }
     }
 }
+
+.menu__dishes > p {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: $black-lighten;
+}
+
 .all-dishes{
     width: auto;
 }

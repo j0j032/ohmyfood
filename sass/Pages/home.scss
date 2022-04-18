@@ -76,6 +76,9 @@
     background-color: $white;
     @include shadow;
     @include generic-radius;
+    &:hover{
+        @include shadow--hover;
+    }
     &__tag{
         position: relative;
         z-index: 2;

@@ -53,14 +53,6 @@ a {
   text-decoration: none;
   color: #262627;
 }
-a:hover {
-  transition: color 0.5s;
-  font-weight: bold;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
-}
 
 body {
   font-family: "Roboto", sans-serif;
@@ -70,17 +62,19 @@ p {
   font-weight: 100;
 }
 
-.menu__dishes > p {
-  font-size: 1.2em;
-  font-weight: 300;
-  color: #4c4c4e;
-}
-
 h1 {
   font-family: "Shrikhand";
 }
 
 .home h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5em;
+  width: 90%;
+  margin: 20px 0px 0px 0px;
+  margin-top: 60px;
+}
+
+.home h2 {
   font-family: "Roboto", sans-serif;
   font-size: 1.5em;
   width: 90%;
@@ -116,16 +110,11 @@ h6 {
   border: none;
   border-radius: 50px;
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  box-shadow: 2px 2px 5px 2px lightgray;
+  box-shadow: 2px 2px 10px 2px lightgray;
 }
 .btn:hover {
   box-shadow: 2px 2px 10px 4px lightgray;
   background-image: linear-gradient(to bottom right, #ff93e1, #a16be0);
-}
-
-.btn > a {
-  color: #fffefc;
-  font-weight: 400;
 }
 
 .loader {
@@ -291,6 +280,7 @@ h6 {
   align-items: flex-start;
 }
 .footer__logo {
+  font-family: shrikhand;
   font-size: 1em;
   color: #fffefc;
   margin-bottom: 0px;
@@ -354,7 +344,7 @@ h6 {
   width: 90%;
   height: 70px;
   border-radius: 20px;
-  box-shadow: 2px 2px 5px 2px lightgray;
+  box-shadow: 2px 2px 10px 2px lightgray;
 }
 .fonctionnement__element--gray {
   display: flex;
@@ -362,7 +352,7 @@ h6 {
   width: 90%;
   height: 70px;
   border-radius: 20px;
-  box-shadow: 2px 2px 5px 2px lightgray;
+  box-shadow: 2px 2px 10px 2px lightgray;
   background-color: #f7f7f7;
 }
 .fonctionnement__element--gray:hover {
@@ -377,7 +367,7 @@ h6 {
   width: 90%;
   height: 70px;
   border-radius: 20px;
-  box-shadow: 2px 2px 5px 2px lightgray;
+  box-shadow: 2px 2px 10px 2px lightgray;
   background-color: #f2eafb;
 }
 .fonctionnement__element--grayActive .fonctionnement__icon {
@@ -422,8 +412,11 @@ h6 {
   width: 90%;
   height: fit-content;
   background-color: #fffefc;
-  box-shadow: 2px 2px 5px 2px lightgray;
+  box-shadow: 2px 2px 10px 2px lightgray;
   border-radius: 20px;
+}
+.rest-prev:hover {
+  box-shadow: 2px 2px 5px 2px lightgray;
 }
 .rest-prev__tag {
   position: relative;
@@ -607,6 +600,12 @@ h6 {
   max-width: 200px;
 }
 
+.menu__dishes > p {
+  font-size: 1.2em;
+  font-weight: 300;
+  color: #4c4c4e;
+}
+
 .all-dishes {
   width: auto;
 }
@@ -626,7 +625,7 @@ h6 {
   width: 90%;
   height: 70px;
   border-radius: 20px;
-  box-shadow: 2px 2px 5px 2px lightgray;
+  box-shadow: 2px 2px 10px 2px lightgray;
   background-color: #fffefc;
   overflow: hidden;
   width: 96%;
