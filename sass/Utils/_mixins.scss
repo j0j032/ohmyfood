@@ -46,7 +46,7 @@
 @mixin overflow {
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; 
 }
 
 @mixin flexBox-bg-direction($value,$direction){

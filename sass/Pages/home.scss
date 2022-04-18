@@ -163,7 +163,7 @@
         padding-bottom: 200px;
         &__cards{
         @include flexBox-bg-direction(transparent,row);
-        overflow-x: auto;
+        overflow-x: scroll;
         white-space: nowrap;
         justify-content: flex-start;
         width:90%;

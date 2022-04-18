@@ -212,9 +212,11 @@ h6 {
   .header__back-btn {
     margin-right: 3%;
   }
+  .header__logo {
+    margin-left: 5%;
+  }
   .header__logo--withBtn {
     order: 1;
-    margin-left: 3%;
   }
   .header__location {
     order: 2;
@@ -238,15 +240,15 @@ h6 {
 }
 
 .form {
-  width: 100%;
-  height: 50px;
-  display: flex;
-  justify-content: space-evenly;
   background-color: #EAEAEA;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 17%;
+  width: 83%;
+  height: 50px;
   box-shadow: inset 0px 1px 2px rgb(197, 196, 196);
-}
-.form__icon {
-  margin-left: 20px;
 }
 .form__field {
   margin-left: 10px;
@@ -260,6 +262,15 @@ h6 {
   color: #262627;
   font-size: 16px;
   font-weight: 500;
+}
+
+.form > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  width: fit-content;
+  height: 100%;
 }
 
 /* Responsive ________________________________________________*/
@@ -531,7 +542,7 @@ footer a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-x: auto;
+    overflow-x: scroll;
     white-space: nowrap;
     justify-content: flex-start;
     width: 90%;
