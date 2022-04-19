@@ -1,13 +1,10 @@
 .form{
-    width: 100%;
+    @include flexBox-bg-direction($gray,column);
+    padding-left: 17%;
+    width: 83%;
     height: 50px;
-    display: flex;
-    justify-content: space-evenly;
-    background-color: $gray;
     box-shadow: inset 0px 1px 2px rgb(197, 196, 196);
-    &__icon{
-        margin-left: 20px;
-    }
+    
     &__field{
         margin-left: 10px;
         border: none;
@@ -20,5 +17,28 @@
                 font-size: 16px;
                 font-weight: 500;
             }
+    }
+}
+
+.form > p{
+    @include centered;
+    width: fit-content;
+    height: 100%;
+}
+
+/* Responsive ________________________________________________*/
+
+@include mobile{
+    .form--desktop{
+        display: none;
+    }
+}
+
+@include desktop{
+    .form{
+        display: none;
+        &__field{
+            background-color: transparent;
+        }
     }
 }
